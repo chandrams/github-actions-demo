@@ -1,0 +1,25 @@
+name: matrix
+on:
+  pull_request:
+    paths-ignore:
+      - 'docs/**'
+  workflow_dispatch:
+  push:
+jobs:
+   hello:
+       runs-on: ${{ matrix.os }}
+       strategy:
+          matrix:
+            java: [ '8', '11' ]
+            os: [ ubuntu-latest, windows-latest macos-latest ]
+       steps:
+          - uses: actions/checkout@v2   
+          - name: Set up JDK ${{ matrix.java }}
+            uses: actions/setup-java@v2
+            with:
+              java-version: ${{ matrix.java }}
+              distribution: 'adopt'
+          - name: Run Hello.java
+            run: | 
+              javac src/Hello.java            
+              java -cp src Hello.class
