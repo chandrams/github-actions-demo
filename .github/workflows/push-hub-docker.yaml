@@ -10,11 +10,11 @@ jobs:
           - name: Login to DockerHub
           - uses: docker/login-action@v1 
             with:
-            username: chandra25ms
-            password: ${{ secrets.DOCKER_PASSWORD }}
+              username: chandra25ms
+              password: ${{ secrets.DOCKERHUB_PASSWORD }}
             
-         - name: Build and push
-           uses: docker/build-push-action@v2
-           with:
-           push: true
-           tags: chandra25ms/hello:latest
+          - name: Build and push
+            uses: docker/build-push-action@v2
+            with:
+              push: true
+              tags: chandra25ms/hello:latest
