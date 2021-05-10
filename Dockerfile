@@ -1,4 +1,4 @@
-FROM adoptopenjdk:11-jre-hotspot
+FROM adoptopenjdk/openjdk8:latest
 
 RUN mkdir /opt/app
 COPY Hello.java /opt/app
