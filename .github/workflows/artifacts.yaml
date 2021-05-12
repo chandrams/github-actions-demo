@@ -25,3 +25,20 @@ jobs:
            name: results
            path: ./helloworld.txt
            retention-days: 1
+
+
+  download:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+                
+      - name: Download results
+        uses: actions/download-artifact@v2
+        with:
+           name: results
+           
+      - name: Display structure of downloaded files
+        run: ls     
