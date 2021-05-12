@@ -14,8 +14,8 @@ jobs:
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Checkout autotune
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+      - name: Create a file
         run:
            echo "hello world" > "helloworld.txt"
            
