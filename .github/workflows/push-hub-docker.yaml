@@ -1,5 +1,5 @@
 name: dockerhub
-on: [ pull_request, workflow_dispatch, push ]
+on: [ workflow_dispatch, push ]
   
 jobs:
    build:
