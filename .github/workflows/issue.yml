@@ -9,7 +9,7 @@ jobs:
     steps:
       - run: |
           echo "Comment on PR #${{ github.event.issue.number }}"
-
+          
   issue_commented:
     # This job only runs for issue comments
     name: Issue comment
