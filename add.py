@@ -1,6 +1,6 @@
 # This program adds two numbers
 
-num1 = 5.1
+num1 = 5.2
 num2 = 2.3
 
 # Add two numbers
