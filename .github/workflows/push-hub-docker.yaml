@@ -1,5 +1,9 @@
 name: dockerhub
-on: [ workflow_dispatch, push ]
+on: 
+  push:
+    paths-ignore: 
+      - '.github/**'
+      - '**.py'
   
 jobs:
    build:
