@@ -25,7 +25,7 @@ jobs:
               java-version: ${{ matrix.java }}
               distribution: 'adopt'
               
-          - name: Run Hello.java
+          - name: Run Hello App
             run: | 
               javac Hello.java            
               java Hello
