@@ -2,9 +2,8 @@ name: 'Matrix builds'
 on:
   pull_request:
     paths-ignore:
-      - 'docs/**'
       - '.github/**'
-      - '**.py'
+    
   workflow_dispatch:
   
 jobs:
