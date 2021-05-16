@@ -4,6 +4,8 @@ on:
     paths-ignore: 
       - '.github/**'
       - '**.py'
+  workflow_dispatch:
+    
   
 jobs:
    build:
